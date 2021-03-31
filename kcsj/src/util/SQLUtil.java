@@ -35,14 +35,14 @@ public class SQLUtil {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	//¹¹Ôì·½·¨£¬¶¨ÒåÇı¶¯³ÌĞòÁ¬½ÓÓÃ»§ÃûºÍÃÜÂëĞÅÏ¢
+	//æ„é€ æ–¹æ³•ï¼Œå®šä¹‰é©±åŠ¨ç¨‹åºè¿æ¥ç”¨æˆ·åå’Œå¯†ç ä¿¡æ¯
     public SQLUtil(){
 	  driver="com.mysql.jdbc.Driver";
 	  url="jdbc:mysql://localhost:3306/books?useSSL=false";
 	  username="root";
-	  password="310310";
+	  password="xxx";
     }
-	// »ñÈ¡Á¬½Ó¶ÔÏó
+	// è·å–è¿æ¥å¯¹è±¡
 	public Connection getConnection() {
 		try {
 			Class.forName(driver);
@@ -54,7 +54,7 @@ public class SQLUtil {
 		}
 		return con;
 	}
-	// »ñÈ¡Óï¾ä¶ÔÏó
+	// è·å–è¯­å¥å¯¹è±¡
 	public PreparedStatement getPrepareStatement(String sql) {
 		try {
 			pstmt = getConnection().prepareStatement(sql);
@@ -63,7 +63,7 @@ public class SQLUtil {
 		}
 		return pstmt;
 	}
-	// ¸øpstmtµÄSQLÓï¾äÉèÖÃ²ÎÊı£¨ÒªÇó²ÎÊıÒÔÊı×éĞÎÊ½¸ø³ö£©
+	// ç»™pstmtçš„SQLè¯­å¥è®¾ç½®å‚æ•°ï¼ˆè¦æ±‚å‚æ•°ä»¥æ•°ç»„å½¢å¼ç»™å‡ºï¼‰
 	public void setParams(String sql, String[] params) {
 		pstmt = this.getPrepareStatement(sql);
 		if(params != null){
@@ -77,7 +77,7 @@ public class SQLUtil {
 		}
 	}
 	
-	// ¹Ø±Õ¶ÔÏó
+	// å…³é—­å¯¹è±¡
 	public void close() {
 		try {
 			if (rs != null)
