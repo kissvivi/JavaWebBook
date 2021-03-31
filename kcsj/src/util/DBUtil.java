@@ -34,14 +34,14 @@ public class DBUtil {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	//¹¹Ôì·½·¨£¬¶¨ÒåÇı¶¯³ÌĞòÁ¬½ÓÓÃ»§ÃûºÍÃÜÂëĞÅÏ¢
+	//æ„é€ æ–¹æ³•ï¼Œå®šä¹‰é©±åŠ¨ç¨‹åºè¿æ¥ç”¨æˆ·åå’Œå¯†ç ä¿¡æ¯
     public DBUtil(){
 	  driver="com.mysql.jdbc.Driver";
 	  url="jdbc:mysql://localhost:3306/books?useSSL=false";
 	  username="root";
-	  password="310310";
+	  password="xxx";
     }
-	// »ñÈ¡Á¬½Ó¶ÔÏó
+	// è·å–è¿æ¥å¯¹è±¡
 	private Connection getConnection() {
 		try {
 			Class.forName(driver);
@@ -53,7 +53,7 @@ public class DBUtil {
 		}
 		return con;
 	}
-	// »ñÈ¡Óï¾ä¶ÔÏó
+	// è·å–è¯­å¥å¯¹è±¡
 	public PreparedStatement getPrepareStatement(String sql) {
 		try {
 			pstmt = getConnection().prepareStatement(sql);
@@ -62,7 +62,7 @@ public class DBUtil {
 		}
 		return pstmt;
 	}
-	// ¸øpstmtµÄSQLÓï¾äÉèÖÃ²ÎÊı£¨ÒªÇó²ÎÊıÒÔÊı×éĞÎÊ½¸ø³ö£©
+	// ç»™pstmtçš„SQLè¯­å¥è®¾ç½®å‚æ•°ï¼ˆè¦æ±‚å‚æ•°ä»¥æ•°ç»„å½¢å¼ç»™å‡ºï¼‰
 	private void setParams(String sql, String[] params) {
 		pstmt = this.getPrepareStatement(sql);
 		if(params != null){
@@ -75,7 +75,7 @@ public class DBUtil {
 			}		
 		}
 	}
-	// Ö´ĞĞÊı¾İ¿â²éÑ¯²Ù×÷Ê±£¬½«·µ»ØµÄ½á¹û·â×°µ½List¶ÔÏóÖĞ
+	// æ‰§è¡Œæ•°æ®åº“æŸ¥è¯¢æ“ä½œæ—¶ï¼Œå°†è¿”å›çš„ç»“æœå°è£…åˆ°Listå¯¹è±¡ä¸­
 	public List getList(String sql, String[] params){
 		List list = new ArrayList();
 		try {
@@ -100,7 +100,7 @@ public class DBUtil {
 		}
 		return list;
 	}
-	// Ö´ĞĞÊı¾İ¿â²éÑ¯²Ù×÷Ê±£¬½«·µ»ØµÄ½á¹û·â×°µ½List¶ÔÏóÖĞ
+	// æ‰§è¡Œæ•°æ®åº“æŸ¥è¯¢æ“ä½œæ—¶ï¼Œå°†è¿”å›çš„ç»“æœå°è£…åˆ°Listå¯¹è±¡ä¸­
 	public Map getMap(String sql, String[] params){
 		List list=getList(sql, params);
 		if(list.isEmpty())
@@ -109,12 +109,12 @@ public class DBUtil {
 		    return (Map)list.get(0);
 		
 	}
-	// ¸üĞÂÊı¾İ¿âÊ±µ÷ÓÃµÄupdate·½·¨
+	// æ›´æ–°æ•°æ®åº“æ—¶è°ƒç”¨çš„updateæ–¹æ³•
 	public int update(String sql, String[] params) {
-		int recNo = 0;// ±íÊ¾ÊÜÓ°ÏìµÄ¼ÇÂ¼ĞĞÊı
+		int recNo = 0;// è¡¨ç¤ºå—å½±å“çš„è®°å½•è¡Œæ•°
 		try {
-			setParams(sql, params);// ¸ù¾İsqlÓï¾äºÍparams£¬ÉèÖÃpstmt¶ÔÏó
-			recNo = pstmt.executeUpdate();// Ö´ĞĞ¸üĞÂ²Ù×÷
+			setParams(sql, params);// æ ¹æ®sqlè¯­å¥å’Œparamsï¼Œè®¾ç½®pstmtå¯¹è±¡
+			recNo = pstmt.executeUpdate();// æ‰§è¡Œæ›´æ–°æ“ä½œ
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -122,7 +122,7 @@ public class DBUtil {
 		}
 		return recNo;
 	}
-	// ¹Ø±Õ¶ÔÏó
+	// å…³é—­å¯¹è±¡
 	private void close() {
 		try {
 			if (rs != null)
