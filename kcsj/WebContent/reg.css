@@ -1,0 +1,27 @@
+button
+{
+background: #ff5f32;
+border-radius:50%;
+text-align:center;
+
+}
+input
+{
+
+margin:0px auto 15px;
+border-radius:5px;
+background: white;
+
+padding:12px 20px 12px 10px;
+border:none;
+color:#929999;                       
+box-shadow:inset 0px 1px 5px #272727;
+}
+body{
+background:#222526;
+position:relative;
+padding:100px;
+font-family:verdana;
+color: white;
+} 
+    

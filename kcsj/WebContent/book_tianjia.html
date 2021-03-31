@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>添加页面</title>
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="head.css">  
+   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h3 align="center">添加书籍信息</h3>
+<div align="center">
+<form action="tianjia">
+<table>
+<tr><th>书名</th><td><input type="text" name="book_name"></td></tr>
+<tr><th>作者</th><td><input type="text" name="zuozhe"></td></tr>
+<tr><th>单价</th><td><input type="text" name="danjia"></td></tr>
+<tr><th>isbn</th><td><input type="text" name="isbn"></td></tr>
+<tr><th>出版社</th><td><input type="text" name="chubanshe"></td></tr>
+<tr><th>简介</th><td><textarea name="jianjie"></textarea></td></tr>
+<tr><th>图片地址</th><td><input type="text" name="image"></td></tr>
+<tr></tr>
+</table>
+<br>
+<button class="btn btn-danger" type="submit">添加</button>&nbsp;&nbsp;<button class="btn btn-danger" type="button" onclick="window.location.href('showbook.jsp')">返回</button>
+</form>
+</div>
+</body>
+</html>

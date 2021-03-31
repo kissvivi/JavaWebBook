@@ -1,0 +1,44 @@
+
+.table{
+	background: white;
+	border-color: white;
+}
+.button{
+	background: black;
+}
+.background{
+	background: black;
+
+}
+.back{
+	border: hidden;
+	border-color: red;
+}
+.yell{
+	background: yellow;
+
+}
+.gre{
+	background:green;
+}
+.whi{
+	background: white;
+
+}
+.button {
+	width: 60px;
+	height: 30px;
+	top: 20px;
+}
+.text{
+	font-size: 17px;
+}
+.da_text{
+	font-size: 21px;
+	color: black;	
+}
+.redf{
+	font-style: #ff3e3e;
+	font-size: 17px;
+	font-style: #ff0000;
+}

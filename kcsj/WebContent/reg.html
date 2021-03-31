@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>    
+  <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <title>注册表单</title>
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="reg.css">  
+   <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+  <h3 align="center">注册页面</h3>
+  <div  align="center" >
+  <form action="reg" method="post">
+  <table>
+
+  	      <tr><th>姓名：</th><td><input type="text" name="name" checked="checked"></td></tr>
+    	  <tr><th>用户名：</th><td><input type="text" name="id" checked="checked"></td></tr>
+    	  <tr><th>密码：</th><td><input type="password" name="password" checked="checked"></td></tr>
+    	  <tr><th>手机：</th><td><input type="text" name="phone_number" checked="checked"></td></tr>
+    	  <tr><th>住址：</th><td><input type="text" name="dizhi" checked="checked"></td></tr>
+    	  <tr><th>邮箱：</th><td><input type="text" name="mail" checked="checked"></td></tr>
+          
+  </table><br>
+          <button class="btn btn-danger" type="submit">注册</button>&nbsp;&nbsp;<button class="btn btn-danger"  onclick="window.location.href('login.html')" type="button">返回</button>
+     </form>
+    	
+   
+</div>
+  </body>
+</html>

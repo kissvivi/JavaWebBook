@@ -1,0 +1,35 @@
+********kk网上书店2.0***********
+
+
+*****用户端*****
+
+
+逻辑层（模型层）：beans包
+admin.java 处理登录 及管理员信息逻辑操作
+Books.java 处理图书信息的逻辑操作
+Goods.java 处理订单信息
+
+控制层：servlets包
+login.java 控制登录
+reg.java  控制注册
+sousuo.java  控制搜索
+
+ 
+视图层
+root.jsp为首页
+showadmin.jsp   管理员首页
+
+
+********管理员端*******
+
+逻辑层（模型层）：beans包
+admin.java 处理登录 及管理员信息逻辑操作
+Books.java 处理图书信息的逻辑操作
+Goods.java 处理订单信息
+
+控制层：servlets包
+del.java 控制删除
+edit.java  控制修改
+tianjia.java  控制添加
+useredit.java 用户修改
+usertianjia.java 用户添加
