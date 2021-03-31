@@ -61,14 +61,7 @@ CREATE TABLE `bookinfo` (
 -- Records of bookinfo
 -- ----------------------------
 INSERT INTO `bookinfo` VALUES ('123', '123', '123', '123', '123', '123', 'no');
-INSERT INTO `bookinfo` VALUES ('1', 'admin', 'admin', '15549269166', '武汉工商学院', '1150622459@qq.com', 'yes');
-INSERT INTO `bookinfo` VALUES ('xx', 'nihao', '22', '22', '22', '22', 'no');
-INSERT INTO `bookinfo` VALUES ('root', 'root', 'root', 'root', 'root', 'root', 'yes');
-INSERT INTO `bookinfo` VALUES ('向伟', 'vi', '33', '15549269166', '武汉', '1150622459@qq.com', 'no');
-INSERT INTO `bookinfo` VALUES ('向伟', 'vivi', '22', '15549269166', '武汉', '111', 'no');
-INSERT INTO `bookinfo` VALUES ('向伟', 'xw', '222', '2222', '222', '22', 'no');
-INSERT INTO `bookinfo` VALUES ('xw', 'xw1', 'xw2', 'xw3', 'xw4', 'xw5', 'no');
-INSERT INTO `bookinfo` VALUES ('向伟', 'xww', '310310', '15549269166', '湖北', '1150622459@qq.com', 'no');
+INSERT INTO `bookinfo` VALUES ('1', 'admin', 'admin', '155492691xx', '武汉工商学院', '1150622459@qq.com', 'yes');
 
 -- ----------------------------
 -- Table structure for ddan
